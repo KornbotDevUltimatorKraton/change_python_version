@@ -19,6 +19,9 @@ sudo apt-get autoremove python3-pip -y
 sudo apt install python3.8-distutils
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3.8 get-pip.py
-
+#if found the problem of pip and no space left on the device then using the below solution 
+#https://stackoverflow.com/questions/55103162/could-not-install-packages-due-to-an-environmenterror-errno-28-no-space-left
+sudo systemctl mask tmp.mount
+export TMPDIR='/var/tmp'
 #Now all python3.8 setup test install by pip3 
 
